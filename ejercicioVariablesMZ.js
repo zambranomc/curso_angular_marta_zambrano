@@ -31,6 +31,14 @@ console.log(ap1)
 let ap2 = edad>=18 && completeName.includes("Juan");
 console.log(ap2)
 
+//Ingreso por edad
+if (edad>=18){
+    console.log(`Puedes pasar ya tienes ${edad}`)
+}else{
+    diferenciaEdad= (18*12 - edad*12);
+    console.log(`Te faltan ${diferenciaEdad} meses` )
+}
+
 
 
 
