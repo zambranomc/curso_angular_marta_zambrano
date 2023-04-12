@@ -76,4 +76,30 @@ for(let indice = 0; indice<= 10; indice+=2){
 /*4. Uso de bucle while
 1. Escribe un bucle while que muestre en consola los números del 1 al 10.
 */ 
+let numero2 = 0;
+
+while (numero2<=10) {
+    console.log(numero2);
+    numero2++;
+}
+
+/*5. Uso de bucle do-while
+1. Escribe un bucle do-while que muestre en consola los números del 1 al 10.
+*/
+let numero4 = 1;
+do {console.log(numero4);
+    numero4++;
+} while (numero4<=10);
+
+/*
+6. Uso de bucle for anidado
+1. Escribe un bucle for anidado que muestre en consola una tabla de multiplicar del 1 al 10.
+ */
+for (let mul = 1; mul <= 10; mul++) {
+     for (let mul2 = 1; mul2 <=10; mul2++){
+        console.log (`El resulatdo de  ${mul} * ${mul2} = ${mul*mul2}`);
+     }
+    console.log("\n");
+}
+
 
