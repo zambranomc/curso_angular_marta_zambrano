@@ -7,7 +7,7 @@ function saludo (nombre){
     console.log(`¡Hola ${nombre} !`);
 }
 
-console.log(saludo("Juan"));
+saludo("Juan");
 saludo("Patricia");
 
 //Otro ejemplo
