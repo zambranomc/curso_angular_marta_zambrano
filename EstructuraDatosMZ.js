@@ -103,9 +103,10 @@ for (const calificacion1 of calificaciones1){
 }console.log(calificacionesAltas);
 
 //Opcion 2: Funcion filter
+
 console.log("Ejercicio con Listas y filtros op 2");
-//Let calificacionesAltas2 = calificaciones1.filter(calificacion1 => calificacion1 >= 40);
-//console.log(calificacionesAltas2);
+let calificacionesAltas2 = calificaciones1.filter(calificacion2 => calificacion2 >= 40);
+console.log(calificacionesAltas2);
 
 //Calcular la Media de las calificaciones
 //Opcion1: sumar con bucle for y dividir
