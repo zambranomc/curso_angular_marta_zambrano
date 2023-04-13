@@ -72,7 +72,8 @@ console.log(calificacionesDefinitivas);
 console.log(calificaciones);
 
 
-//Ejemplo map 2
+//Ejemplo map 2 con Cálculo de IVA
+console.log("\n");
 console.log("Ejercicio con Listas y MAP sumar el iva a una lista de precios");
 
 let precioSinIVA = [4.9, 3.3, 2.5, 100.0];
@@ -81,5 +82,50 @@ console.log(precioSinIVA);
 let sumaIVA = precio => precio + precio*0.21;
 let precioConIVA = precioSinIVA.map(sumaIVA);
 console.log(precioConIVA);
+
+//Solución en una línea
+
+let precioConIva1 = precioSinIVA.map(precio1 => precio1 + precio1*0.21);
+
+//Filtrar
+console.log("\n");
+console.log("Ejercicio con Listas y filtros");
+let calificaciones1 = [10, 20, 30, 40, 50];
+console.log(calificaciones1);
+
+//Opcion1
+let calificacionesAltas =[];
+for (const calificacion1 of calificaciones1){
+    if (calificacion1 >=40){
+        calificacionesAltas.push(calificacion1);
+        //console.log(calificacionesAltas);
+    }
+}console.log(calificacionesAltas);
+
+//Opcion 2: Funcion filter
+console.log("Ejercicio con Listas y filtros op 2");
+//Let calificacionesAltas2 = calificaciones1.filter(calificacion1 => calificacion1 >= 40);
+//console.log(calificacionesAltas2);
+
+//Calcular la Media de las calificaciones
+//Opcion1: sumar con bucle for y dividir
+console.log("Ejercicio con Listas calculo media");
+let totalCalificaciones = 0;
+for (const sumaCalificacion of calificaciones1) {
+     totalCalificaciones = sumaCalificacion + totalCalificaciones;
+} 
+let mediaCalificaciones = totalCalificaciones/calificaciones1.length;
+
+console.log (`El resultado de la media es: ${mediaCalificaciones}`);
+
+
+//Opcion 2: sumar con reduce y luego dividir
+
+let calcularSumatorio = (totalCalificaciones, sumaCalificacion) => totalCalificaciones + sumaCalificacion;
+let sumatorio = calificaciones1.reduce(calcularSumatorio,0);
+console.log(`${sumatorio}`);
+let calificacionmedia2= sumatorio/calificaciones1.length;
+console.log(calificacionmedia2);
+
 
 
