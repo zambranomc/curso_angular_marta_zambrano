@@ -7,7 +7,7 @@ class SmartPhone {
     }
 
     descripcion(){
-        console.log(`El nombre del SmartPhone es ${this.modelo} sus caracteristicas son ${this.cores} ${this.ram}`);
+        console.log(`El nombre del SmartPhone es ${this.modelo} sus caracteristicas son core: ${this.cores} y  ram  ${this.ram}`);
     }
 }
 
