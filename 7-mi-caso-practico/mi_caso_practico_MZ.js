@@ -28,28 +28,67 @@ class Tarea {
         this.estado = estado;
         this.prioridad = prioridad;
         this.fechaEntrega = fechaEntrega;
-        this.listaTareas=[id, titulo, descripcion, estado, fechaEntrega];
-
+      
     }
 
-     //Añadir Tarea
-     addTarea (tipoTarea) {
-        this.listaTareas.push(tipoTarea);
-    }
-    //Imprimir tareas
-    imprimirTarea (){
-        console.log(`La tarea es ${this.listaTareas}`);
-    }
-
-    //Tareas filtardas por estado
-    
 }
 
+class ServiciosTareas{
 
-let date1 = new Date();
-let tarea1 = new Tarea(1, "estudiar", "repaso POO", "pendiente", "urgente", date1);
+    constructor (){
+        this.listaTareas = [];
+    }
 
-tarea1.addTarea ("trabajo");
+    addNuevaTarea(nuevaTarea){
+        let maxId = 0;
+        for (const actividadActual of this.listaTareas) {
+            if (actividadActual.id > maxId)
+                maxId = actividadActual.id;
+        }
+        console.log(`Valor id máximo: ${maxId}`);
+
+        maxId++;
+        nuevaTarea.id = maxId;
+        this.listaTareas.push(nuevaTarea);
+        return nuevaTarea;
+    }
 
 
-console.log(tarea1.imprimirTarea());
+}
+
+let nuevaTarea1 = new ServiciosTareas();
+let reunionTrabajo = new Tarea (
+    undefined,
+    "Reunión JavaScript",
+    "Ver caso práctico",
+    "En progreso",
+    "Media",
+    new Date("2023-04-18")
+    );
+
+let running = new Tarea(
+    undefined,
+    "Entrenamiento carrera",
+    "Correr 2 KM",
+    "Pendiente",
+    "Normal",
+    new Date("2023-04-15")
+    );
+
+    let paseo = new Tarea(
+        undefined,
+        "Paseo a chorrera",
+        "Caminar 2 KM",
+        "Pendiente",
+        "Normal",
+        new Date("2023-04-17")
+        );
+
+    reunionTrabajo = nuevaTarea1.addNuevaTarea(reunionTrabajo);
+    console.log(reunionTrabajo.id);
+
+    running = nuevaTarea1.addNuevaTarea(running);
+    console.log(running.id);
+
+    paseo = nuevaTarea1.addNuevaTarea(paseo);
+    console.log(paseo.id);
