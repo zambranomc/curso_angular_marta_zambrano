@@ -14,3 +14,6 @@ let saludo : string = saludar('Maria');
 console.log(saludo);
 console.log(typeof saludo);
 
+let saludo1 : string = saludar('Rosa');
+console.log(saludo1);
+console.log(typeof saludo1);
