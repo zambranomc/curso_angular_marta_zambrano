@@ -1,0 +1,13 @@
+<p>ejemplo1 works!</p>
+<p>{{mensaje}}</p>
+<p>{{precio}} &euro;</p>
+
+<h3>Ejemplo Producto</h3>
+<p>ID: {{producto1.id}}</p>
+<p>Título: {{producto1.title}}</p>
+<p [ngClass]="producto1.price >= 100 ? 'red' : 'green' ">Precio: {{producto1.price}}</p>
+
+<p [ngClass]="checkPrice()">Precio: {{producto1.price}} </p>
+
+
+

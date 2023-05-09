@@ -1,3 +1,11 @@
 p{
     color: rgb(240, 11, 87);
 }
+.red {
+    background-color: crimson;
+    color: cadetblue;
+}
+
+.green {
+    background-color: chartreuse;
+}

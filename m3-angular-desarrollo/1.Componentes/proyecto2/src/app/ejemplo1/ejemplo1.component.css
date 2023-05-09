@@ -1,0 +1,15 @@
+.red{
+    font-size: 20;
+    background-color: rgb(233, 12, 12);
+    color: blue;
+}
+
+.green{
+    background-color: chartreuse;
+    color: blueviolet;
+}
+
+.blue{
+    background-color: blue;
+    color: chartreuse;
+}

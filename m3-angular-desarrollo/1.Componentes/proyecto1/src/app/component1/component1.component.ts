@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./component1.component.css']
 })
 export class Component1Component {
-
+ title = 'Primer componente';
 }

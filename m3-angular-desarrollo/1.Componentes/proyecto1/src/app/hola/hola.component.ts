@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./hola.component.css']
 })
 export class HolaComponent {
-
+  variable1= 1+4;
 }
