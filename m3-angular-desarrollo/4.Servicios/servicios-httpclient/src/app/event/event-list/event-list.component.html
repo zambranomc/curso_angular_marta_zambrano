@@ -1,5 +1,11 @@
 <h2>Listado de eventos Todos</h2>
 
+<button (click)="findAllByCompletedTrue()">Ver Tareas completadas</button>
+
+<button (click)="findAllByCompletedFalse()">Ver Tareas NO completadas</button>
+
+<button (click)="ngOnInit()">VER TODOS</button>
+
 <ul>
     <li *ngFor="let event of events">
         <span [ngClass]="event.completed ? 'completed': 'uncompleted'">  

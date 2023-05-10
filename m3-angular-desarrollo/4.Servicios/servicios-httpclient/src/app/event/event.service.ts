@@ -22,6 +22,23 @@ export class EventService {
     return this.httpClient.get(`${this.url}/${id}`);
   }
 
+  //filtrar tareas terminadas
+  //findAllByCompletedTrue() ? completed = true
+  //Estructura con parámetreos
+  //con 1 parámetro: ? completed = true
+  //con 2 parámetro: ? param1= value&parame2=value2
+  findAllByCompletedTrue(): Observable<any>{
+    return this.httpClient.get(`${this.url}?completed=true`);
+  }
+
+  //FindAllByCompletedFalse()
+  findAllByCompletedFalse(): Observable<any>{
+    return this.httpClient.get(`${this.url}?completed=false`);
+  }
+
+  //Save
+  //Update
+  //DeleteById
 
 
 }
