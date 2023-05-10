@@ -14,13 +14,15 @@ export class EventListComponent implements OnInit{
   constructor(private eventService: EventService){}
 
   ngOnInit(): void {
-   this.eventService.findAll().subscribe(data => {
-    console.log(data);
-    this.events = data;
-   });
+   this.findAll()
   }
 
-  
+  findAll(): void{
+    this.eventService.findAll().subscribe(data => {
+      console.log(data);
+      this.events = data;
+     });
+  }
 
 
 

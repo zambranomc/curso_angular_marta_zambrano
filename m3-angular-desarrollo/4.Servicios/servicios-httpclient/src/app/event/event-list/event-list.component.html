@@ -1,10 +1,14 @@
-<h2>Listado de eventos Todos</h2>
+<h2>LISTADO DE TAREAS</h2>
 
-<button (click)="findAllByCompletedTrue()">Ver Tareas completadas</button>
+<!-- https://uiverse.io/Mike11jr/soft-mayfly-11 -->
 
-<button (click)="findAllByCompletedFalse()">Ver Tareas NO completadas</button>
+<button class="btn"  (click)="ngOnInit()">VER TODAS</button>
 
-<button (click)="ngOnInit()">VER TODOS</button>
+<button class="btn" (click)="findAllByCompletedTrue()">TERMINADAS</button>
+
+<button class="btn" (click)="findAllByCompletedFalse()">PENDIENTES</button>
+
+
 
 <ul>
     <li *ngFor="let event of events">

@@ -1,0 +1,9 @@
+<h1>Titulo Event Form</h1>
+
+<input type="text" [(ngModel)]="title"/>
+<button (click)="create()">Crear Evento</button>
+
+<div *ngIf="createdEvent">
+    Se ha creado correctamente el event con id asignado
+    {{createdEvent.id}}
+</div>
