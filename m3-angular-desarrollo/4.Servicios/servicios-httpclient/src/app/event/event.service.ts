@@ -43,9 +43,18 @@ create(event: IEvent): Observable<IEvent>{
     return this.httpClient.get<IEvent[]>(`${this.url}?completed=false`);
   }
 
-  //Save
-  //Update
+  
+  //Update modificar algo que existe
+  update(event: IEvent): Observable<IEvent>{
+    return this.httpClient.put<IEvent>(`${this.url}/${event.id}`,event);
+  }
+
+
   //DeleteById
+
+  deleteById(id: number): void{
+    this.httpClient.delete(`${this.url}/${id}`);
+  }
 
 
 }
