@@ -1,0 +1,13 @@
+<p>lista-personal works!</p>
+<h1>Lista de Personas</h1>
+
+<!--Campo de entrada para filtar la lista personas-->
+<label for="buscar">Buscar persona en lista:</label>
+<input  [(ngModel)]="buscar" id="buscar" type="text">
+
+<!-- Mostrar lista personas con bucle *ngFor -->
+<ul>
+    <li *ngFor="let person of personas | filter: buscar">
+        {{person.name}}
+    </li>
+</ul>
