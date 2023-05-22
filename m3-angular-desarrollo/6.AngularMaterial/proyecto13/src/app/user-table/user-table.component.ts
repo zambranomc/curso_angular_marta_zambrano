@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IUser } from '../user-dir/user.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-table',
@@ -30,7 +31,25 @@ export class UserTableComponent {
   }
  ];
 
+view(user: IUser): void {
+  console.log(user);
+}
 
+edit(user: IUser): void{
+  console.log(user);
+}
+
+deleteUser(user: IUser): void{
+  console.log(user);
+}
+
+create(): void{
+  
+}
+
+deleteAll(): void{
+  
+}
 
 
 }
