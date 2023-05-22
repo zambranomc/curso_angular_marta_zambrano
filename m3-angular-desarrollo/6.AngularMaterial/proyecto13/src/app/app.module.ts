@@ -10,13 +10,19 @@ import { UserDirComponent } from './user-dir/user-dir.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
 import {  MatCardModule } from '@angular/material/card';
 import {  MatButtonModule } from '@angular/material/button';
+import { PeriodicElementsComponent } from './periodic-elements/periodic-elements.component';
+import { MatTableModule } from '@angular/material/table';
+import { UserTableComponent } from './user-table/user-table.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     UserListComponent,
     UserDirComponent,
-    UserDetailComponent
+    UserDetailComponent,
+    PeriodicElementsComponent,
+    UserTableComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +30,8 @@ import {  MatButtonModule } from '@angular/material/button';
     MatListModule,
     MatIconModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    MatTableModule
     
   ],
   providers: [],
