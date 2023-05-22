@@ -7,7 +7,7 @@ import { IUser } from '../user-dir/user.model';
   styleUrls: ['./user-table.component.css']
 })
 export class UserTableComponent {
- displayedColumns: string[] = ['avatar','fullName', 'email']
+ displayedColumns: string[] = ['avatar','fullName', 'email', 'actions']
 
  users: IUser[] = [
   {
