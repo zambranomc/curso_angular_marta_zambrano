@@ -1,97 +1,18 @@
 <form [formGroup]="userForm"(ngSubmit)="save()">
 
     <div>
-        <label for="email">Correo electrónico:</label>
-        <input type="email" id="email" formControlName="email">
-    </div>
-    <div>
-        <label for="fullName">Nombre completo:</label>
+        <label for="fullName">Nombre completo: <span style="color: red">*</span></label>
         <input type="text" id="fullName" formControlName="fullName">
-    </div>
-    <div>
-        <label for="age">Edad:</label>
-        <input type="number" id="age" formControlName="age" step="1">
-    </div>
-
-    <div>
-        <label for="salary">Salario:</label>
-        <input type="number" id="salary" formControlName="salary" step="0.1">
-    </div>
-
-   <div>
-         <label for="isStudent">Es estudiante:</label>
-        <input type="checkbox" id="isStudente" formControlName="isStudent" >
-    </div>
-    <div>
-        <label for="birthday ">Fecha de cumpleaños:</label>
-       <input type="date" id="birthday" formControlName="birthday" >
-   </div>
-
-   <div>
-        <label for="entryHour">Hora de entrada:</label>
-        <input type="time" id="entryHour" formControlName="entryHour" >
-    </div>
-
-    <div>
-        <label for="bookingDate">Fecha reserva:</label>
-        <input type="datetime-local" id="bookingDate" formControlName="bookingDate" >
-    </div>
-
-    <div>
-        <label for="jobCategory">Deartamento / Categoría:</label>
-        <div formControlName="jobCategory">
-            <label for="desarrollo">Desarrollo</label>
-            <input for="desarrollo" type="radio" value="desarrollo" formControlName="jobCategory">
-
-            <label for="marketing">Marketing</label>
-            <input for="marketing" type="radio" value="marketing" formControlName="jobCategory">
-
-            <label for="blockchain">Blockchain</label>
-            <input for="blockchain" type="radio" value="blockchain" formControlName="jobCategory">
+        <div>
+        <span *ngIf="userForm.get('fullName')?.invalid && userForm.get('fullName')?.touched">
+            Nombre Obligatorio
+        </span>
         </div>
     </div>
 
-    <div>
-        <label for="company">Empresa:</label>
-        <select id="company" formControlName="company">
-            <option value="">Selecciona la empresa:</option>
-            <option value="Adecco">Adecco</option>
-            <option value="CertiDevs">CertiDevs</option>
-            <option value="Jobify">Jobify</option>
-            <option value="Petgram">Petgram</option>
-
-        </select>
-    </div>
-
-    
-    <div>
-        <label for="hobbies">Intereses o Hobbies:</label>
-        <select id="hobbies" formControlName="hobbies" multiple>
-            <option value="musica">Música</option>
-            <option value="deporte">Deporte</option>
-            <option value="nature">Naturaleza</option>
-            <option value="travel">Viajes</option>
-        </select>
-        <small>Ctrl + click para seleccionar varios</small>
-    </div>
-
-    <div>
-        <label for="bio">Descripción o biografía:</label>
-        <textarea id="bio" formControlName="bio"  rows="4"></textarea>
-    </div>
-
-    <div>
-        <img *ngIf="imageSrc" src="{{imageSrc}}" style="max-width: 200px;">
-        
-        <label for="avatar">Foto de perfil o avatar:</label>
-        <input type="file" (change)="uploadFile($event)" >
-        
-    </div>
 
 
-
-
-    <button type="submit">Guardar</button>
+    <button type="submit" [disabled]="userForm.invalid">Guardar</button>
 
 
 </form>
