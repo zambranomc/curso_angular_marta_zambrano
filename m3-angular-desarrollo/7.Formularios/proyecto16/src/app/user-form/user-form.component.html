@@ -1,0 +1,120 @@
+<form [formGroup]="userForm" (ngSubmit)="save()">
+  
+  <mat-form-field>
+    <mat-label>Nombre completo</mat-label>
+    <input matInput type="text" formControlName="fullName">
+  </mat-form-field>
+        
+  <mat-form-field >
+    <mat-label>Biografia o descripción:</mat-label>
+    <textarea matInput #message maxlength="256" rows="4" placeholder="Ejemplo Necesito ayuda..." 
+          formControlName="bio">
+    </textarea>
+    <mat-hint align="start"><strong>Don't disclose personal info</strong> </mat-hint>
+    <mat-hint align="end">{{message.value.length}} / 256</mat-hint>
+  </mat-form-field>
+           
+  <mat-form-field >
+    <mat-label>Email</mat-label>
+    <input type="email" matInput formControlName="email" placeholder="Ex. pat@example.com">
+    <mat-icon matSuffix>email</mat-icon>
+    <mat-error *ngIf="userForm.get('email')?.invalid &&
+                      userForm.get('email')?.touched &&
+                      userForm.get('email')?.getError('required')">
+      Email obligatorio
+    </mat-error>
+    <mat-error *ngIf="userForm.get('email')?.invalid &&
+                      userForm.get('email')?.touched &&
+                      userForm.get('email')?.getError('email')">
+      Formato email incorrecto
+    </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Contraseña</mat-label>
+      <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
+      <button mat-icon-button matSuffix (click)="hide = !hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+      <mat-error *ngIf="userForm.get('password')?.invalid &&
+                        userForm.get('password')?.touched &&
+                        userForm.get('password')?.getError('required')">
+        Contraseña obligatoria.
+      </mat-error>
+      <mat-error *ngIf="userForm.get('password')?.invalid &&
+                        userForm.get('password')?.touched &&
+                        userForm.get('password')?.getError('pattern')">
+        Contraseña debe ser entre 8 y 20 caracteres utilizando letras, números.
+      </mat-error>
+    </mat-form-field>
+
+                  
+                  
+    <mat-form-field floatLabel="always">
+      <mat-label>Salario</mat-label>
+      <input matInput type="number" class="example-right-align" placeholder="0" formControlName="salary">
+      <span matTextPrefix>&euro;&nbsp;</span>
+      <span matTextSuffix>.00</span>
+      <mat-error *ngIf="userForm.get('salary')?.invalid && 
+                        userForm.get('salary')?.touched">
+        El salario esta entre 10000 y 50000 euros
+      </mat-error>
+    </mat-form-field>
+                  
+    <mat-form-field>
+      <mat-label>Empresa donde trabajas:</mat-label>
+      <mat-select formControlName="company" name="company">
+        <mat-option>Ninguna</mat-option>
+        <mat-option *ngFor="let company of companies" [value]="company.id">
+                  {{company.name}}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="userForm.get('company')?.invalid && 
+                        userForm.get('company')?.touched">
+                Debe selecionar una empresa
+      </mat-error>
+  </mat-form-field>
+       
+
+  <div>
+    <label>Departamento: </label>
+    <mat-radio-group formControlName="department">
+      <mat-radio-button value="development">Desarrollo</mat-radio-button>
+      <mat-radio-button value="marketing">Marketing</mat-radio-button>
+      <mat-radio-button value="blockchain">Blockchain</mat-radio-button>
+    </mat-radio-group>
+    <mat-error *ngIf="userForm.get('department')?.invalid && userForm.get('department')?.touched">
+                Es obligatorio seleccionar un departamento
+    </mat-error>
+  </div>
+
+          
+  <mat-form-field>
+    <mat-label>Hobbies</mat-label>
+      <mat-select formControlName="hobbies" multiple>
+        <mat-select-trigger>
+          {{userForm.get('hobbies')?.value?.[0] || ''}}
+          <span *ngIf="(userForm.get('hobbies')?.value?.length || 0) > 1" class="example-additional-selection">
+                      (+{{(userForm.get('hobbies')?.value?.length || 0) - 1}} {{userForm.get('hobbies')?.value?.length === 2 ? 'other' : 'others'}})
+          </span>
+        </mat-select-trigger>
+        <mat-option *ngFor="let hobbie of hobbies" [value]="hobbie">{{hobbie}}</mat-option>
+      </mat-select>
+      <mat-hint>Puedes seleccionar mas de uno</mat-hint>
+  </mat-form-field>
+
+  <mat-checkbox formControlName="isStudent">Eres estudiante?</mat-checkbox>
+
+  <mat-checkbox formControlName="acceptCondictions">He leido y acpto las condiciones</mat-checkbox>
+  <mat-error *ngIf="userForm.get('acceptCondictions')?.invalid &&
+                    userForm.get('acceptCondictions')?.touched">
+              Acepta las condiciones
+  </mat-error>
+
+        
+  <button mat-fab extended type="submit" [disabled]="userForm.invalid">
+  <mat-icon>send</mat-icon>
+            Enviar
+  </button>
+      
+</form>
