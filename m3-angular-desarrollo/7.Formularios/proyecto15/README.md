@@ -1,27 +1,40 @@
 # Proyecto15
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.1.
+Angular: ReactiveFormsModule
+ng new proyecto15 --routing=false --skip-git --style=css
 
-## Development server
+ng generate component user-form
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+ng generate interface user-form/user --type=model --prefix=I
 
-## Code scaffolding
+ReactiveFormsModule en imports de app.module.ts
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Crear formulario en:
 
-## Build
+user-form.component.ts
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+ng generate component user-form-validation
 
-## Running unit tests
+Expresiones regulares
+Las expresiones regulares son una herramienta poderosa para buscar y manipular strings basados en patrones de caracteres. En el contexto de la validación de formularios en Angular, la función Validators.pattern se usa para validar que el valor de un campo de formulario coincida con un patrón especificado por una expresión regular.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Una expresión regular es una secuencia de caracteres que forma un patrón de búsqueda. Este patrón se utiliza para encontrar coincidencias en una cadena de texto. Por ejemplo, la expresión regular /abc/ encontrará todas las coincidencias de "abc" en una cadena de texto.
 
-## Running end-to-end tests
+Además de caracteres literales, las expresiones regulares pueden incluir metacaracteres que tienen significados especiales. Algunos ejemplos son:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+.: Coincide con cualquier caracter individual, excepto los saltos de línea.
+*: Coincide con cero o más repeticiones del caracter o patrón anterior.
++: Coincide con una o más repeticiones del caracter o patrón anterior.
+?: Hace que el caracter o patrón anterior sea opcional (coincide con cero o una repetición).
+^: Coincide con el inicio de la cadena de texto.
+$: Coincide con el final de la cadena de texto.
+\d: Coincide con cualquier dígito decimal (equivalente a [0-9]).
+\w: Coincide con cualquier caracter alfanumérico o guión bajo (equivalente a [A-Za-z0-9_]).
+\s: Coincide con cualquier espacio en blanco.
+Para validar un correo electrónico utilizando una expresión regular en Angular, podrías hacer algo como esto:
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+'email': new FormControl(null, [
+  Validators.required, 
+  Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$')
+])
+Esta expresión regular significa que el correo electrónico debe comenzar con uno o más caracteres alfanuméricos, puntos, guiones bajos, porcentajes, signos más o guiones (^[a-z0-9._%+-]+), seguido de un arroba (@), luego uno o más caracteres alfanuméricos, puntos o guiones ([a-z0-9.-]+), seguido de un punto (\.), y finalmente de dos a cuatro caracteres alfabéticos ([a-z]{2,4}$).
