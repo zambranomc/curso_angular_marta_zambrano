@@ -16,6 +16,8 @@ export class UserFormComponent {
 
   hide=true;
 
+ 
+
   hobbies: string[] = ['sport', 'music', 'travel'];
 
   companies: ICompany[]= [
@@ -35,7 +37,12 @@ export class UserFormComponent {
     salary: new FormControl(null, [Validators.min(10000), Validators.max(50000)]),
     department: new FormControl(null, [Validators.required]),
     company: new FormControl('', [Validators.required]),
-    hobbies: new FormControl([])
+    hobbies: new FormControl([]),
+    city: new FormControl([]),
+    postalCode: new FormControl('',[Validators.pattern('^[0-9]{5}$')]),
+    birthday: new FormControl(null),
+    jobStartDate: new FormControl(null),
+    jobEndDate: new FormControl(null)
   });
 
   save():void{}

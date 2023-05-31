@@ -47,9 +47,7 @@
         Contraseña debe ser entre 8 y 20 caracteres utilizando letras, números.
       </mat-error>
     </mat-form-field>
-
-                  
-                  
+                
     <mat-form-field floatLabel="always">
       <mat-label>Salario</mat-label>
       <input matInput type="number" class="example-right-align" placeholder="0" formControlName="salary">
@@ -102,6 +100,48 @@
       </mat-select>
       <mat-hint>Puedes seleccionar mas de uno</mat-hint>
   </mat-form-field>
+
+
+  <table  cellspacing="0">
+    <tr>
+      <td>
+        <mat-form-field>
+          <mat-label>City</mat-label>
+          <input matInput placeholder="Ex. San Francisco" formControlName="city">
+        </mat-form-field>
+      </td>
+   
+      <td>
+        <mat-form-field >
+          <mat-label>Postal Code</mat-label>
+          <input matInput type="number" min="00000"  max="99999" placeholder="Ex. 94105" value="94043" formControlName="postalCode">
+        </mat-form-field>
+      </td>
+    </tr>
+</table>
+
+<mat-form-field>
+  <mat-label>Fecha de nacimiento:</mat-label>
+  <input matInput [matDatepicker]="picker" formControlName="birthday" >
+  <mat-hint>DD/MM/YYYY</mat-hint>
+  <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+
+<mat-form-field>
+  <mat-label>Periodo de actividad</mat-label>
+  <mat-date-range-input [rangePicker]="pickerRange">
+    <input matStartDate placeholder="Start date" formControlName="jobStartDate">
+    <input matEndDate placeholder="End date" formControlName="jobEndtDate">
+  </mat-date-range-input>
+  <mat-hint>DD/MM/YYYY – DD/MM/YYYY</mat-hint>
+  <mat-datepicker-toggle matIconSuffix [for]="pickerRange"></mat-datepicker-toggle>
+  <mat-date-range-picker #pickerRange></mat-date-range-picker>
+</mat-form-field>
+
+
+
+
 
   <mat-checkbox formControlName="isStudent">Eres estudiante?</mat-checkbox>
 
