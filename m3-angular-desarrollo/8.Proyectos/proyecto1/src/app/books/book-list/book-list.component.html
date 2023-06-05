@@ -1,0 +1,60 @@
+<h2>LISTADO DE LIBROS</h2>
+
+<button mat-raised-button color="primary" routerLink="/books/new">
+    <mat-icon>add</mat-icon>
+    Crear libro
+</button>
+
+<table mat-table [dataSource]="books" class="mat-elevation-z8">
+    <ng-container matColumnDef="title">
+        <th mat-header-cell *matHeaderCellDef>Título</th>
+        <td mat-cell *matCellDef="let book">{{book.title | uppercase}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="sinopsis">
+        <th mat-header-cell *matHeaderCellDef>Sinopsis</th>
+        <td mat-cell *matCellDef="let book">{{book.sinopsis | limitLongText:15}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="release">
+        <th mat-header-cell *matHeaderCellDef>Fecha de lanzamiento</th>
+        <td mat-cell *matCellDef="let book">{{book.release | date:'dd/MM/YY'}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="numPages">
+        <th mat-header-cell *matHeaderCellDef>Número de páginas</th>
+        <td mat-cell *matCellDef="let book">{{book.numPages}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="price">
+        <th mat-header-cell *matHeaderCellDef>Precio</th>
+        <td mat-cell *matCellDef="let book" style="width: 80px;">{{book.price | number:'1.2-2'}} €</td>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef>Acciones</th>
+        <td mat-cell *matCellDef="let book" style="width: 300px;">
+          
+            <button mat-button  color="primary" class="btn-primary" [routerLink]="['/books', book.id]">
+                <mat-icon>visibility</mat-icon>
+                Ver
+            </button>
+            
+            <button mat-button color="primary" class="btn-primary" [routerLink]="['/books', book.id, 'edit']">
+                <mat-icon>edit</mat-icon>
+                Editar
+            </button>
+
+            <button mat-button color="primary" class="btn-primary" (click)="deleteBook(book)">
+                <mat-icon>delete</mat-icon>
+                Borrar
+            </button>
+
+        </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+</table>
+
