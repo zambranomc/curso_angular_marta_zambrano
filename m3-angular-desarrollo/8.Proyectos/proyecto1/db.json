@@ -4,101 +4,143 @@
       "id": 1,
       "title": "Toy Story That Time Forgot",
       "sinopsis": "at vulputate vitae nisl aenean lectus pellentesque eget nunc donec",
-      "release": "2015/01/15",
+      "release": "2015-01-15T22:00:00.000Z",
       "numPages": 408,
-      "photo": "http://dummyimage.com/192x100.png/dddddd/000000",
+      "photo": "https://covers.openlibrary.org/b/isbn/9780385533225-L.jpg",
       "price": 37.36,
-      "authorId": 6
+      "authorId": 6,
+      "categories":[
+        1,
+        3
+      ]
     },
     {
       "id": 2,
       "title": "First Sunday",
       "sinopsis": "curabitur convallis duis consequat dui nec nisi volutpat eleifend donec ut dolor morbi",
-      "release": "2017/07/19",
+      "release": "2017-07-19T22:00:00.000Z",
       "numPages": 498,
-      "photo": "http://dummyimage.com/170x100.png/dddddd/000000",
+      "photo": "https://covers.openlibrary.org/b/isbn/9780385533225-S.jpg",
       "price": 72.31,
-      "authorId": 3
+      "authorId": 3,
+      "categories":[
+        2,
+        3
+      ]
+
     },
     {
       "id": 3,
       "title": "Eddie and the Cruisers II: Eddie Lives!",
       "sinopsis": "aliquet maecenas leo odio condimentum id luctus nec molestie sed justo pellentesque viverra pede",
-      "release": "2022/03/01",
+      "release": "2017-07-19T22:00:00.000Z",
       "numPages": 323,
-      "photo": "http://dummyimage.com/184x100.png/ff4444/ffffff",
+      "photo": "https://covers.openlibrary.org/b/isbn/9780385533225-L.jpg",
       "price": 28.62,
-      "authorId": 4
+      "authorId": 4,
+      "categories":[
+        2,
+        3
+      ]
     },
     {
       "id": 4,
       "title": "Elizabeth I",
       "sinopsis": "morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit",
-      "release": "2023/04/22",
+      "release": "2017-07-19T22:00:00.000Z",
       "numPages": 423,
-      "photo": "http://dummyimage.com/137x100.png/dddddd/000000",
+      "photo": "https://covers.openlibrary.org/b/isbn/9780385533225-L.jpg",
       "price": 50.44,
-      "authorId": 3
+      "authorId": 3,
+      "categories":[
+        2,
+        4
+      ]
     },
     {
       "id": 5,
       "title": "Too Beautiful for You (Trop belle pour toi)",
       "sinopsis": "vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero nullam sit amet turpis elementum ligula vehicula",
-      "release": "2019/01/03",
+      "release": "2017-07-19T22:00:00.000Z",
       "numPages": 442,
       "photo": "http://dummyimage.com/199x100.png/ff4444/ffffff",
       "price": 57.52,
-      "authorId": 10
+      "authorId": 10,
+      "categories":[
+        2,
+        3
+      ]
     },
     {
       "id": 6,
       "title": "Summer's Tale, A (Conte d'été)",
       "sinopsis": "sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae",
-      "release": "2015/10/13",
+      "release": "2017-07-19T22:00:00.000Z",
       "numPages": 785,
       "photo": "http://dummyimage.com/118x100.png/cc0000/ffffff",
       "price": 11.48,
-      "authorId": 5
+      "authorId": 5,
+      "categories":[
+        1,
+        2
+      ]
     },
     {
       "id": 7,
       "title": "Late Quartet, A",
       "sinopsis": "tincidunt nulla mollis molestie lorem quisque ut erat curabitur gravida nisi at nibh in hac habitasse platea dictumst",
-      "release": "2022/06/02",
+      "release": "2017-07-19T22:00:00.000Z",
       "numPages": 184,
       "photo": "http://dummyimage.com/161x100.png/ff4444/ffffff",
       "price": 7.21,
-      "authorId": 9
+      "authorId": 9,
+      "categories":[
+        1,
+        5
+      ]
     },
     {
       "id": 8,
       "title": "Unstoppable",
       "sinopsis": "est risus auctor sed tristique in tempus sit amet sem fusce consequat nulla nisl",
-      "release": "2017/09/04",
+      "release": "2017-07-19T22:00:00.000Z",
       "numPages": 606,
       "photo": "http://dummyimage.com/163x100.png/cc0000/ffffff",
       "price": 16.51,
-      "authorId": 3
+      "authorId": 3,
+      "categories":[
+        4,
+        5
+      ]
+
     },
     {
       "id": 9,
       "title": "Soldier's Plaything, A",
       "sinopsis": "quam a odio in hac habitasse platea dictumst maecenas ut massa quis",
-      "release": "2010/06/20",
+      "release": "2017-07-19T22:00:00.000Z",
       "numPages": 286,
-      "photo": "http://dummyimage.com/242x100.png/dddddd/000000",
+      "photo": "http://dummyimage.com/170x100.png/dddddd/000000",
       "price": 99.73,
-      "authorId": 5
+      "authorId": 7,
+      "categories":[
+        1,
+        3
+      ]
     },
     {
       "id": 10,
       "title": "Wolf",
       "sinopsis": "metus aenean fermentum donec ut mauris eget massa tempor convallis nulla neque libero convallis eget eleifend",
-      "release": "2015/08/13",
+      "release": "2017-07-19T22:00:00.000Z",
       "numPages": 144,
       "photo": "http://dummyimage.com/217x100.png/cc0000/ffffff",
       "price": 26.4,
-      "authorId": 10
+      "authorId": 10,
+      "categories":[
+        2,
+        4
+      ]
     },
     {
       "id": 11,
@@ -108,7 +150,67 @@
       "numPages": 0,
       "photo": "",
       "price": 0,
-      "authorId": 0
+      "authorId": 4,
+      "categories":[
+        1,
+        5
+      ]
+    },
+    {
+      "id": 12,
+      "title": "La casa de los espiritus",
+      "sinopsis": "Novela de Isabel Allende",
+      "release": "2023-06-05T09:56:06.512Z",
+      "numPages": 0,
+      "photo": "",
+      "price": 50,
+      "authorId": 3,
+      "categories":[
+        1,
+        4
+      ]
+    },
+    {
+      "id": 13,
+      "title": "Cien años de Soledad",
+      "sinopsis": "Novela",
+      "release": "2017-06-04T22:00:00.000Z",
+      "numPages": 0,
+      "photo": "",
+      "price": 120,
+      "authorId": 2,
+      "categories":[
+        5,
+        3
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Cumbres Borrascosas",
+      "sinopsis": "Novela",
+      "release": "2023-06-13T22:00:00.000Z",
+      "numPages": 37,
+      "photo": "http://dummyimage.com/170x100.png/dddddd/000000",
+      "price": 52,
+      "authorId": 6,
+      "categories":[
+        2,
+        3
+      ]
+    },
+    {
+      "id": 15,
+      "title": "CODE ",
+      "sinopsis": "Programar",
+      "release": "2023-06-06T08:45:36.102Z",
+      "numPages": 33,
+      "photo": "http://dummyimage.com/170x100.png/dddddd/000000",
+      "price": 60,
+      "authorId": 4,
+      "categories":[
+        1,
+        3
+      ]
     }
   ],
   "authors": [
@@ -118,7 +220,7 @@
       "bio": "potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non mauris morbi",
       "birthday": "9/20/2022",
       "city": "Belgorod",
-      "photo": "http://dummyimage.com/132x100.png/5fa2dd/ffffff"
+      "photo": "https://api.uifaces.co/our-content/donated/xZ4wg2Xj.jpg"
     },
     {
       "id": 2,
@@ -126,7 +228,7 @@
       "bio": "amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi non quam nec dui luctus",
       "birthday": "5/9/2023",
       "city": "Buenavista",
-      "photo": "http://dummyimage.com/164x100.png/dddddd/000000"
+      "photo": "https://xsgames.co/randomusers/avatar.php?g=female"
     },
     {
       "id": 3,
@@ -134,7 +236,7 @@
       "bio": "in tempus sit amet sem fusce consequat nulla nisl nunc nisl",
       "birthday": "11/24/2022",
       "city": "Turi",
-      "photo": "http://dummyimage.com/238x100.png/5fa2dd/ffffff"
+      "photo": "https://api.uifaces.co/our-content/donated/xZ4wg2Xj.jpg"
     },
     {
       "id": 4,
@@ -142,7 +244,7 @@
       "bio": "iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate",
       "birthday": "4/2/2023",
       "city": "Afareaitu",
-      "photo": "http://dummyimage.com/147x100.png/dddddd/000000"
+      "photo": "https://api.uifaces.co/our-content/donated/xZ4wg2Xj.jpg"
     },
     {
       "id": 5,
@@ -150,7 +252,7 @@
       "bio": "non sodales sed tincidunt eu felis fusce posuere felis sed lacus morbi sem mauris laoreet ut rhoncus",
       "birthday": "10/6/2022",
       "city": "Kolindrós",
-      "photo": "http://dummyimage.com/112x100.png/cc0000/ffffff"
+      "photo": "https://xsgames.co/randomusers/avatar.php?g=female"
     },
     {
       "id": 6,
@@ -208,5 +310,43 @@
       "photo": "http://dummyimage.com/164x100.png/dddddd/000000",
       "id": 12
     }
+  ],
+  "categories":[
+    {
+      "id": 1,
+      "name": "Estilo de Vida",
+      "minAge": 13,
+      "color": "blue",
+      "photo": "https://picsum.photos/200"
+    },
+    {
+      "id": 2,
+      "name": "Alimentación",
+      "minAge": 13,
+      "color": "green",
+      "photo": "https://picsum.photos/200"
+    },
+    {
+      "id": 3,
+      "name": "Deportes",
+      "minAge": 13,
+      "color": "orange",
+      "photo": "https://picsum.photos/200"
+    },
+    {
+      "id": 4,
+      "name": "No ficción",
+      "minAge": 13,
+      "color": "violet",
+      "photo": "https://picsum.photos/200"
+    },
+    {
+      "id": 5,
+      "name": "Romance",
+      "minAge": 13,
+      "color": "red",
+      "photo": "https://picsum.photos/200"
+    }
+    
   ]
 }

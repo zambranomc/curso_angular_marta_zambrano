@@ -1,3 +1,5 @@
+import { ICategory } from "src/app/categories/models/category.model";
+
 export interface IBook {
     id: number;
     title: string;
@@ -7,4 +9,5 @@ export interface IBook {
     photo: string;
     price: number;
     authorId: number;
+    categories: number[];
 }

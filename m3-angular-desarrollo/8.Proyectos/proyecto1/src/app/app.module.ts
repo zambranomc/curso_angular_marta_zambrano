@@ -14,6 +14,8 @@ import{ MatButtonModule } from '@angular/material/button';
 import{  MatToolbarModule } from '@angular/material/toolbar';
 import{  MatMenuModule } from '@angular/material/menu';
 import{  MatGridListModule } from '@angular/material/grid-list';
+import { AuthorsModule } from './authors/authors.module';
+import { CategoriesModule } from './categories/categories.module';
 
 
 
@@ -32,7 +34,9 @@ import{  MatGridListModule } from '@angular/material/grid-list';
     MatToolbarModule,
     MatIconModule,
     MatMenuModule,
-    MatGridListModule
+    MatGridListModule,
+    AuthorsModule,
+    CategoriesModule
 
 
   ],

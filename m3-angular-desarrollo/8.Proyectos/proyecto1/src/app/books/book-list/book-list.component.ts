@@ -19,6 +19,6 @@ export class BookListComponent implements OnInit {
     this.bookService.findAll().subscribe(data => this.books =data );
   }
 
-  deleteBook(book: IBook){}
+  deleteBook(book: IBook){ }
 
 }
