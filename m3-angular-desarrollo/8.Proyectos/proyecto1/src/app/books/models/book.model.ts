@@ -8,6 +8,7 @@ export interface IBook {
     numPages: number;
     photo: string;
     price: number;
+    //Asociaciones: relaciones con otros modelos
     authorId: number;
     categories: number[];
 }
