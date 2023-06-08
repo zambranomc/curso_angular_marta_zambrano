@@ -2,58 +2,29 @@
   "books": [
     {
       "id": 1,
-      "title": "Toy Story That Time Forgot",
+      "title": "Toy Story That Time Forgot editado editado",
       "sinopsis": "at vulputate vitae nisl aenean lectus pellentesque eget nunc donec",
-      "release": "2015-01-15T22:00:00.000Z",
+      "release": "2023-04-29T22:00:00.000Z",
       "numPages": 408,
       "photo": "https://covers.openlibrary.org/b/isbn/9780385533225-L.jpg",
       "price": 37.36,
-      "authorId": 6,
-      "categories":[
+      "authorId": 1,
+      "categories": [
         1,
-        3
+        2
       ]
-    },
-    {
-      "id": 2,
-      "title": "First Sunday",
-      "sinopsis": "curabitur convallis duis consequat dui nec nisi volutpat eleifend donec ut dolor morbi",
-      "release": "2017-07-19T22:00:00.000Z",
-      "numPages": 498,
-      "photo": "https://covers.openlibrary.org/b/isbn/9780385533225-S.jpg",
-      "price": 72.31,
-      "authorId": 3,
-      "categories":[
-        2,
-        3
-      ]
-
     },
     {
       "id": 3,
-      "title": "Eddie and the Cruisers II: Eddie Lives!",
+      "title": "Eddie and the Cruisers II: Eddie Lives! edit",
       "sinopsis": "aliquet maecenas leo odio condimentum id luctus nec molestie sed justo pellentesque viverra pede",
-      "release": "2017-07-19T22:00:00.000Z",
+      "release": "2023-04-29T22:00:00.000Z",
       "numPages": 323,
       "photo": "https://covers.openlibrary.org/b/isbn/9780385533225-L.jpg",
       "price": 28.62,
       "authorId": 4,
-      "categories":[
-        2,
-        3
-      ]
-    },
-    {
-      "id": 4,
-      "title": "Elizabeth I",
-      "sinopsis": "morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit",
-      "release": "2017-07-19T22:00:00.000Z",
-      "numPages": 423,
-      "photo": "https://covers.openlibrary.org/b/isbn/9780385533225-L.jpg",
-      "price": 50.44,
-      "authorId": 3,
-      "categories":[
-        2,
+      "categories": [
+        3,
         4
       ]
     },
@@ -61,12 +32,13 @@
       "id": 5,
       "title": "Too Beautiful for You (Trop belle pour toi)",
       "sinopsis": "vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero nullam sit amet turpis elementum ligula vehicula",
-      "release": "2017-07-19T22:00:00.000Z",
+      "release": "2023-04-29T22:00:00.000Z",
       "numPages": 442,
-      "photo": "http://dummyimage.com/199x100.png/ff4444/ffffff",
+      "photo": "https://covers.openlibrary.org/b/isbn/9780385533225-L.jpg",
       "price": 57.52,
       "authorId": 10,
-      "categories":[
+      "categories": [
+        1,
         2,
         3
       ]
@@ -75,56 +47,51 @@
       "id": 6,
       "title": "Summer's Tale, A (Conte d'été)",
       "sinopsis": "sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae",
-      "release": "2017-07-19T22:00:00.000Z",
+      "release": "2023-04-29T22:00:00.000Z",
       "numPages": 785,
-      "photo": "http://dummyimage.com/118x100.png/cc0000/ffffff",
+      "photo": "https://covers.openlibrary.org/b/isbn/9780385533225-L.jpg",
       "price": 11.48,
       "authorId": 5,
-      "categories":[
-        1,
-        2
+      "categories": [
+        1
       ]
     },
     {
       "id": 7,
       "title": "Late Quartet, A",
       "sinopsis": "tincidunt nulla mollis molestie lorem quisque ut erat curabitur gravida nisi at nibh in hac habitasse platea dictumst",
-      "release": "2017-07-19T22:00:00.000Z",
+      "release": "2023-04-29T22:00:00.000Z",
       "numPages": 184,
-      "photo": "http://dummyimage.com/161x100.png/ff4444/ffffff",
+      "photo": "https://covers.openlibrary.org/b/isbn/9780385533225-L.jpg",
       "price": 7.21,
       "authorId": 9,
-      "categories":[
-        1,
-        5
+      "categories": [
+        3,
+        4
       ]
     },
     {
       "id": 8,
       "title": "Unstoppable",
       "sinopsis": "est risus auctor sed tristique in tempus sit amet sem fusce consequat nulla nisl",
-      "release": "2017-07-19T22:00:00.000Z",
+      "release": "2023-04-29T22:00:00.000Z",
       "numPages": 606,
-      "photo": "http://dummyimage.com/163x100.png/cc0000/ffffff",
+      "photo": "https://covers.openlibrary.org/b/isbn/9780385533225-L.jpg",
       "price": 16.51,
-      "authorId": 3,
-      "categories":[
-        4,
-        5
-      ]
-
+      "authorId": 3
     },
     {
       "id": 9,
       "title": "Soldier's Plaything, A",
       "sinopsis": "quam a odio in hac habitasse platea dictumst maecenas ut massa quis",
-      "release": "2017-07-19T22:00:00.000Z",
+      "release": "2023-04-29T22:00:00.000Z",
       "numPages": 286,
-      "photo": "http://dummyimage.com/170x100.png/dddddd/000000",
+      "photo": "https://covers.openlibrary.org/b/isbn/9780385533225-L.jpg",
       "price": 99.73,
-      "authorId": 7,
-      "categories":[
+      "authorId": 5,
+      "categories": [
         1,
+        2,
         3
       ]
     },
@@ -132,84 +99,31 @@
       "id": 10,
       "title": "Wolf",
       "sinopsis": "metus aenean fermentum donec ut mauris eget massa tempor convallis nulla neque libero convallis eget eleifend",
-      "release": "2017-07-19T22:00:00.000Z",
+      "release": "2023-04-29T22:00:00.000Z",
       "numPages": 144,
-      "photo": "http://dummyimage.com/217x100.png/cc0000/ffffff",
+      "photo": "https://covers.openlibrary.org/b/isbn/9780385533225-L.jpg",
       "price": 26.4,
       "authorId": 10,
-      "categories":[
-        2,
-        4
-      ]
-    },
-    {
-      "id": 11,
-      "title": "El Principito",
-      "sinopsis": "Cuento clásico, historia de los viajes del principito",
-      "release": "2023-06-05T08:37:18.778Z",
-      "numPages": 0,
-      "photo": "",
-      "price": 0,
-      "authorId": 4,
-      "categories":[
+      "categories": [
         1,
+        2,
+        4,
         5
       ]
     },
     {
-      "id": 12,
-      "title": "La casa de los espiritus",
-      "sinopsis": "Novela de Isabel Allende",
-      "release": "2023-06-05T09:56:06.512Z",
-      "numPages": 0,
-      "photo": "",
+      "id": 11,
+      "title": "nuevo libro prueba",
+      "sinopsis": "ffsfsdf",
+      "release": "2023-06-06T12:09:30.930Z",
+      "numPages": 50,
+      "photo": "http://dummyimage.com/217x100.png/cc0000/ffffff",
       "price": 50,
-      "authorId": 3,
-      "categories":[
-        1,
-        4
-      ]
-    },
-    {
-      "id": 13,
-      "title": "Cien años de Soledad",
-      "sinopsis": "Novela",
-      "release": "2017-06-04T22:00:00.000Z",
-      "numPages": 0,
-      "photo": "",
-      "price": 120,
-      "authorId": 2,
-      "categories":[
-        5,
-        3
-      ]
-    },
-    {
-      "id": 14,
-      "title": "Cumbres Borrascosas",
-      "sinopsis": "Novela",
-      "release": "2023-06-13T22:00:00.000Z",
-      "numPages": 37,
-      "photo": "http://dummyimage.com/170x100.png/dddddd/000000",
-      "price": 52,
-      "authorId": 6,
-      "categories":[
+      "authorId": 1,
+      "categories": [
         2,
-        3
-      ]
-    },
-    {
-      "id": 15,
-      "title": "CODE ",
-      "sinopsis": "Programar",
-      "release": "2023-06-06T08:45:36.102Z",
-      "numPages": 33,
-      "photo": "http://dummyimage.com/170x100.png/dddddd/000000",
-      "price": 60,
-      "authorId": 4,
-      "categories":[
-        1,
-        3
+        3,
+        4
       ]
     }
   ],
@@ -218,39 +132,39 @@
       "id": 1,
       "fullName": "Barclay Stickings",
       "bio": "potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non mauris morbi",
-      "birthday": "9/20/2022",
+      "birthday": "2023-04-29T22:00:00.000Z",
       "city": "Belgorod",
-      "photo": "https://api.uifaces.co/our-content/donated/xZ4wg2Xj.jpg"
+      "photo": "https://xsgames.co/randomusers/avatar.php?g=female"
     },
     {
       "id": 2,
       "fullName": "Consolata Heijnen",
       "bio": "amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi non quam nec dui luctus",
-      "birthday": "5/9/2023",
+      "birthday": "2023-04-29T22:00:00.000Z",
       "city": "Buenavista",
-      "photo": "https://xsgames.co/randomusers/avatar.php?g=female"
+      "photo": "https://xsgames.co/randomusers/avatar.php?g=male"
     },
     {
       "id": 3,
       "fullName": "Efren Bellie",
       "bio": "in tempus sit amet sem fusce consequat nulla nisl nunc nisl",
-      "birthday": "11/24/2022",
+      "birthday": "2023-04-29T22:00:00.000Z",
       "city": "Turi",
-      "photo": "https://api.uifaces.co/our-content/donated/xZ4wg2Xj.jpg"
+      "photo": "https://xsgames.co/randomusers/avatar.php?g=male"
     },
     {
       "id": 4,
       "fullName": "Francine Recke",
       "bio": "iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate",
-      "birthday": "4/2/2023",
+      "birthday": "2023-04-29T22:00:00.000Z",
       "city": "Afareaitu",
-      "photo": "https://api.uifaces.co/our-content/donated/xZ4wg2Xj.jpg"
+      "photo": "https://xsgames.co/randomusers/avatar.php?g=female"
     },
     {
       "id": 5,
       "fullName": "Thatch Yeldon",
       "bio": "non sodales sed tincidunt eu felis fusce posuere felis sed lacus morbi sem mauris laoreet ut rhoncus",
-      "birthday": "10/6/2022",
+      "birthday": "2023-04-29T22:00:00.000Z",
       "city": "Kolindrós",
       "photo": "https://xsgames.co/randomusers/avatar.php?g=female"
     },
@@ -258,86 +172,86 @@
       "id": 6,
       "fullName": "Dinah Jee",
       "bio": "at vulputate vitae nisl aenean lectus pellentesque eget nunc donec",
-      "birthday": "1/7/2023",
+      "birthday": "2023-04-29T22:00:00.000Z",
       "city": "Patquía",
-      "photo": "http://dummyimage.com/140x100.png/5fa2dd/ffffff"
+      "photo": "https://xsgames.co/randomusers/avatar.php?g=female"
     },
     {
       "id": 7,
       "fullName": "Teena Nanson",
       "bio": "justo etiam pretium iaculis justo in hac habitasse platea dictumst etiam",
-      "birthday": "8/19/2022",
+      "birthday": "2023-04-29T22:00:00.000Z",
       "city": "Sanxi",
-      "photo": "http://dummyimage.com/140x100.png/cc0000/ffffff"
+      "photo": "https://xsgames.co/randomusers/avatar.php?g=female"
     },
     {
       "id": 8,
       "fullName": "Stewart Dallon",
       "bio": "quis turpis sed ante vivamus tortor duis mattis egestas metus aenean fermentum donec ut mauris eget massa tempor",
-      "birthday": "1/17/2023",
+      "birthday": "2023-04-29T22:00:00.000Z",
       "city": "Yangkang",
-      "photo": "http://dummyimage.com/176x100.png/5fa2dd/ffffff"
+      "photo": "https://xsgames.co/randomusers/avatar.php?g=female"
     },
     {
       "id": 9,
       "fullName": "Lavinia Noel",
       "bio": "ut erat curabitur gravida nisi at nibh in hac habitasse platea",
-      "birthday": "7/13/2022",
+      "birthday": "2023-04-29T22:00:00.000Z",
       "city": "Oebai",
-      "photo": "http://dummyimage.com/153x100.png/cc0000/ffffff"
+      "photo": "https://xsgames.co/randomusers/avatar.php?g=female"
     },
     {
       "id": 10,
       "fullName": "Erny Knellen",
       "bio": "pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus in",
-      "birthday": "2/28/2023",
+      "birthday": "2023-04-29T22:00:00.000Z",
       "city": "Herrera",
-      "photo": "http://dummyimage.com/224x100.png/cc0000/ffffff"
+      "photo": "https://xsgames.co/randomusers/avatar.php?g=female"
     },
     {
       "fullName": "Autor desde postman",
       "bio": "amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi non quam nec dui luctus",
-      "birthday": "5/9/2023",
+      "birthday": "2023-04-29T22:00:00.000Z",
       "city": "Buenavista",
-      "photo": "http://dummyimage.com/164x100.png/dddddd/000000",
+      "photo": "https://xsgames.co/randomusers/avatar.php?g=female",
       "id": 11
     },
     {
       "fullName": "Autor desde postman",
       "bio": "amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi non quam nec dui luctus",
-      "birthday": "5/9/2023",
+      "birthday": "2023-04-29T22:00:00.000Z",
       "city": "Buenavista",
-      "photo": "http://dummyimage.com/164x100.png/dddddd/000000",
+      "photo": "https://xsgames.co/randomusers/avatar.php?g=female",
       "id": 12
     }
   ],
-  "categories":[
+  "categories": [
     {
       "id": 1,
-      "name": "Estilo de Vida",
+      "name": "Estilo de vida",
       "minAge": 13,
       "color": "blue",
-      "photo": "https://picsum.photos/200"
+      "photo": "https://picsum.photos/100"
     },
     {
       "id": 2,
       "name": "Alimentación",
       "minAge": 13,
-      "color": "green",
+      "color": "yellow",
       "photo": "https://picsum.photos/200"
     },
     {
       "id": 3,
       "name": "Deportes",
       "minAge": 13,
-      "color": "orange",
+      "color": "blue",
       "photo": "https://picsum.photos/200"
     },
     {
       "id": 4,
-      "name": "No ficción",
+      "name": "No Ficción",
       "minAge": 13,
-      "color": "violet",
+      "color": "black",
       "photo": "https://picsum.photos/200"
     },
     {
@@ -347,6 +261,5 @@
       "color": "red",
       "photo": "https://picsum.photos/200"
     }
-    
   ]
 }

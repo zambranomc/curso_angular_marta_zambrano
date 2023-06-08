@@ -19,7 +19,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatListModule } from '@angular/material/list';
-
+import {MatChipsModule} from '@angular/material/chips';
 
 @NgModule({
     declarations: [
@@ -43,7 +43,8 @@ import { MatListModule } from '@angular/material/list';
         ReactiveFormsModule,
         MatInputModule,
         MatSelectModule,
-        MatListModule
+        MatListModule,
+        MatChipsModule
     ],
     providers:[
         {provide: MAT_DATE_LOCALE, useValue: 'es-ES'}

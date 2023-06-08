@@ -5,6 +5,16 @@
     Crear libro
 </button>
 
+<mat-chip-listbox aria-label="Dog selection">
+   <a  *ngFor="let author of authors " [routerLink]="['/books/author', author.id]">
+        <mat-chip-option color="primary">
+        <img matChipAvatar [src]="author.photo" [alt]="author.fullName"/>
+       {{author.fullName}}
+        </mat-chip-option>
+    </a>
+  </mat-chip-listbox>
+
+
 <table mat-table [dataSource]="books" class="mat-elevation-z8">
     <ng-container matColumnDef="title">
         <th mat-header-cell *matHeaderCellDef>Título</th>
@@ -57,4 +67,8 @@
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 
 </table>
+
+<div *ngIf="books.length === 0" style="text-align: center; min-height: 100px;">
+    No se han encontrado libros
+</div>
 

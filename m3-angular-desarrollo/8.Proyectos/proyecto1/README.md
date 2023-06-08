@@ -46,3 +46,15 @@ Tareas
 *Formulario para crear/editar libro
 *Galeria de libros
 *Borrar libro
+
+
+#Comandos
+APLICACION SERVIDOR DE DATOS
+En en proyecto ejecutar la terminal
+json-server  --watch db.json
+http://localhost:3000
+
+APLICACION WEB
+En en proyecto ejecutar la terminal
+ng serve
+http://localhost:4200
