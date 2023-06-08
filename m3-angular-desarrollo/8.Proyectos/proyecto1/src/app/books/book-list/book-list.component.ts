@@ -4,6 +4,7 @@ import { IBook } from '../models/book.model';
 import { AuthorService } from 'src/app/authors/services/author.service';
 import { IAuthor } from 'src/app/authors/models/author.model';
 import { ActivatedRoute, Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-book-list',
@@ -19,7 +20,8 @@ export class BookListComponent implements OnInit {
   constructor(private bookService: BookService,
               private authorService: AuthorService,
               private activatedRoute: ActivatedRoute,
-              private router: Router
+              private router: Router,
+              private snackbar: MatSnackBar,
               ) {}
 
 
@@ -51,9 +53,13 @@ export class BookListComponent implements OnInit {
           this.loadBooks();
         } else {
           console.log("Se ha producido un error");
+          this.snackbar.open('Se ha producido un error, inténtalo más tarde', 'cerrar',{duration:3000});
         }
       },
-      error: error => console.log(error),
+      error: error => {
+        console.log(error);
+        this.snackbar.open('Se ha producido un error, inténtalo más tarde', 'cerrar',{duration:3000});
+      }
     });
   
   }

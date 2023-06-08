@@ -14,6 +14,10 @@
     </a>
   </mat-chip-listbox>
 
+  <div *ngIf="books.length">
+    Hay {{books.length}} libros en total
+  </div>
+
 
 <table mat-table [dataSource]="books" class="mat-elevation-z8">
     <ng-container matColumnDef="title">

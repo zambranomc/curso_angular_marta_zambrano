@@ -20,6 +20,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatListModule } from '@angular/material/list';
 import {MatChipsModule} from '@angular/material/chips';
+import{  MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
     declarations: [
@@ -44,7 +45,9 @@ import {MatChipsModule} from '@angular/material/chips';
         MatInputModule,
         MatSelectModule,
         MatListModule,
-        MatChipsModule
+        MatChipsModule,
+        MatSnackBarModule,
+        
     ],
     providers:[
         {provide: MAT_DATE_LOCALE, useValue: 'es-ES'}

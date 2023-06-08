@@ -15,3 +15,8 @@ a:hover{
     opacity: 0.6;
     transition: 0.3s;
 }
+
+mat-chip-listbox{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
