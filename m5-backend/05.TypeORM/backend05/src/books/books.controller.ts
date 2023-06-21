@@ -1,4 +1,4 @@
-import { Controller, Get, Param } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post, Put } from '@nestjs/common';
 import { BooksService } from './books.service';
 import { Book } from './books.model';
 
@@ -58,6 +58,31 @@ export class BooksController {
     findAllOrderByPriceAsc(): Promise<Book[]>{
         return this.bookService.findAllOrderByPriceAsc();
     }
+
+/**  Comprobar
+ * localhost/3000/books
+ * {
+        "id": 0,
+        "title": "libro postman",
+        "isbn": "11111111",
+        "price": "10.00",
+        "createDate": "null",
+        "quantity": 2,
+        "published": true
+    }*/
+
+    @Post()
+    async create(@Body() book:Book): Promise<Book>{
+        return await this.bookService.create(book);
+    }
+
+    //Metodo Update del service
+
+    @Put()
+    async update(@Body() book:Book): Promise<Book>{
+        return await this.bookService.update(book);
+    }
+
 
 
 
