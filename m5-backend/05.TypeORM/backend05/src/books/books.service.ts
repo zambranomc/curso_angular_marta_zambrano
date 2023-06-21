@@ -80,7 +80,14 @@ export class BooksService {
 
     //Metodo
     
+    findAllOrderByPriceAsc(): Promise<Book[]>{
+        return this.bookRepo.find({
+            order:{
+                price: "ASC"
+            }
+        });
 
+    }
 
 
 

@@ -54,7 +54,10 @@ export class BooksController {
         }
 
 
-
+    @Get('order-by-price-asc')
+    findAllOrderByPriceAsc(): Promise<Book[]>{
+        return this.bookService.findAllOrderByPriceAsc();
+    }
 
 
 
