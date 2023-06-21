@@ -125,9 +125,27 @@ export class BooksService {
         }
     }
 
-    //Método dete by id
+    //Método delete by id
 
-        
+    async deleteById(id: number){
+        let exist = await this.bookRepo.exist({
+            where: {
+                id: id
+            }
+        });
+
+        if(!exist) throw new NotFoundException('Not found');
+
+        try {
+            await this.bookRepo.delete(id);
+        } catch (error) {
+            throw new ConflictException('No se puede borrar');
+        }
+       
+    }
+    
+
+
 
 
 
