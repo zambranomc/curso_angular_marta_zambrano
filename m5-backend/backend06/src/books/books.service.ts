@@ -18,7 +18,9 @@ export class BooksService {
     findAllWithRelatons(): Promise<Book[]>{
         return this.bookRepo.find({
             relations: { 
-                author: true}
+                author: true,
+                editorial: true
+            }
         });
     }
 
@@ -45,15 +47,18 @@ findAllProjections(): Promise<Book[]>{
 findAllByAuthorId(authorId:number): Promise<Book[]>{
     return this.bookRepo.find({
         relations:{
-            author: true
+            author: true,
+           
         },
         where: {
             author:{
                 id: authorId
+            
             }
         }
     });
 }
+// encontrar por editorial id
 
 
     findById(id: number): Promise<Book |null>{
@@ -159,6 +164,8 @@ findAllByAuthorId(authorId:number): Promise<Book[]>{
             bookFromDB.published = book.published;
             bookFromDB.quantity = book.quantity;
             bookFromDB.title = book.title;
+            bookFromDB.author = book.author;
+            bookFromDB.editorial = book.editorial;
             await this.bookRepo.update(bookFromDB.id, bookFromDB);
 
             return bookFromDB;
@@ -185,11 +192,38 @@ findAllByAuthorId(authorId:number): Promise<Book[]>{
         }
        
     }
+
+
+    async deleteAllByAuthorId(authorId: number){
+        //Opcion 1 traigo los libros y borro
+        /**let books = await this.bookRepo.find({
+            select:{
+                id:true
+            },
+            relations:{
+                author: false
+            },
+            where: {
+                author:{
+                    id: authorId
+                }
+            }
+        });
+
+        let ids = books.map(book => book.id);
+        await this.bookRepo.delete(ids);*/
+
+        //Opcion 2 borrar directo
+
+        await this.bookRepo.delete({
+            author:{
+                id: authorId
+            }
+        });
+        
+
+    }
     
-
-
-
-
 
 }
 

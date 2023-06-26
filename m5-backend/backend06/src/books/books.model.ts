@@ -1,4 +1,5 @@
 import { Author } from "src/authors/authors.model";
+import { Editorial } from "src/editorials/editorials.model";
 import { Column, Entity, PrimaryGeneratedColumn, CreateDateColumn, JoinColumn, ManyToOne } from "typeorm";
 
 
@@ -25,11 +26,17 @@ export class Book{
     @Column({type: 'boolean', default: false})
     published: boolean;
 
-    //author ManyToOne
+    //Asociación con author ManyToOne
 
     @ManyToOne(() => Author)
     @JoinColumn({name: 'id-author'})
     author: Author;
+
+    //Asociacion con editorial
+
+    @ManyToOne(() => Editorial)
+    @JoinColumn({name: 'idEditorial'})
+    editorial: Editorial;
 
 }
 

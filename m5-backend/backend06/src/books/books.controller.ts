@@ -9,13 +9,8 @@ export class BooksController {
 
     @Get()
     findAll(): Promise<Book[]>{
-        //return this.bookService.findAll();
-        //Asociacion simple
-        //return this.bookService.findAllWithRelatons();
-        //Asociacion completa
-        //return this.bookService.findAllProjections();
-
-        return this.bookService.findAllByAuthorId(2);
+        return this.bookService.findAll();
+        
     }
 
     @Get('load-relations')
@@ -32,12 +27,13 @@ export class BooksController {
 
     }
 
-  // @Get('author/:authorId')
-   // findAllByAuthorId(
-   //     @Param("authorId", ParseIntPipe) authorId: Number):
-   //     Promise<Book[]>{
-   //     return this.bookService.findAllByAuthorId(authorId);
-   // }
+
+   @Get('author/:authorId')
+   findAllByAuthorId(
+       @Param("authorId", ParseIntPipe) authorId: number
+       ): Promise<Book[]> {
+       return this.bookService.findAllByAuthorId(authorId);
+   }
 
 
 
@@ -101,6 +97,30 @@ export class BooksController {
         "published": true
     }*/
 
+     /*
+    Cambiar ISBN:
+        {
+    {
+        "id": 0,
+        "title": "libro postman",
+        "isbn": "111111111",
+        "price": "2.45",
+        "quantity": 50,
+        "published": false
+        "title": "book postman2",
+        "isbn": "77777777",
+        "price": "11.00",
+        "quantity": 1,
+        "published": true,
+        "author": {
+            "id": 1
+        },
+        "editorial": {
+            "id": 1
+        }
+    }
+    */
+
     @Post()
     async create(@Body() book:Book): Promise<Book>{
         return await this.bookService.create(book);
@@ -121,7 +141,12 @@ export class BooksController {
         return await this.bookService.deleteById(id);
     }
 
-
+    @Delete('author-id/:authorId')
+    async deleteAllByAuthorId(
+        @Param('authorId', ParseIntPipe) authorId: number
+        ): Promise<void>{
+        return await this.bookService.deleteAllByAuthorId(authorId);
+    }
 
 
 }
