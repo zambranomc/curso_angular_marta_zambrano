@@ -24,7 +24,9 @@ export class Author{
 
 
     //Locations one to one
-    @OneToOne(() => Location, {cascade:true})
+    //eager true carga de forma temprana la asociacion, 
+    //implica que location se carga en las consultas select de author
+    @OneToOne(() => Location, {cascade:true, eager: true})//cuidado con eager
     @JoinColumn()//obligatorio
     location: Location;
 }
