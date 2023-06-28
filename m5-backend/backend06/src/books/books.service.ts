@@ -3,12 +3,14 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Book } from './books.model';
 import { Repository, ILike, Between, MoreThanOrEqual } from 'typeorm';
 import { truncate } from 'fs/promises';
+import { CategoriesService } from 'src/categories/categories.service';
 
 @Injectable()
 export class BooksService {
 
     constructor(
-        @InjectRepository(Book) private bookRepo: Repository<Book>
+        @InjectRepository(Book) private bookRepo: Repository<Book>,
+        private categoryService: CategoriesService
     ){}
 
     findAll(): Promise<Book[]>{
@@ -19,7 +21,8 @@ export class BooksService {
         return this.bookRepo.find({
             relations: { 
                 author: true,
-                editorial: true
+                editorial: true,
+                categories: true,
             }
         });
     }
@@ -138,15 +141,13 @@ findAllByAuthorId(authorId:number): Promise<Book[]>{
 
     //Método crear
 
-    async create(book: Book): Promise<Book>{
+    async create(book: Book): Promise<Book> {
         try {
             return await this.bookRepo.save(book);
         } catch (error) {
-            console.log('falla');
             console.log(error.message);
-            throw new ConflictException('No se ha podido guardar el libro');
+            throw new ConflictException('No se ha podido guardar el libro.');
         }
-       
     }
 
     //Metodo update
@@ -166,10 +167,18 @@ findAllByAuthorId(authorId:number): Promise<Book[]>{
             bookFromDB.title = book.title;
             bookFromDB.author = book.author;
             bookFromDB.editorial = book.editorial;
-            await this.bookRepo.update(bookFromDB.id, bookFromDB);
 
-            return bookFromDB;
+            //let categoryIds = book.categories.map(cat => cat.id);
+            //let categories = await this.categoryService.findAllByIds(categoryIds);
+            //bookFromDB.categories = categories;
+        
+            bookFromDB.categories = book.categories;
+            return await this.bookRepo.save(bookFromDB);
+            //await this.bookRepo.update(bookFromDB.id, bookFromDB);
+            //return bookFromDB;
+            
         } catch (error){
+            console.log(error);
             throw new ConflictException('Error actualizando el Libro');
         }
     }
