@@ -1,0 +1,53 @@
+
+<mat-grid-list cols="3" rowHeight="125" *ngIf="book">
+  
+    <mat-grid-tile rowspan="2">
+        <div>
+            <h2>Portada</h2>
+            <img src="{{book.photo}}" style="max-width: 150px;">
+            
+            <mat-list *ngIf ="author">
+                <mat-list-item >
+                <img matListItemAvatar src="{{author.photo}}" alt="{{author.fullName}}">
+                <div matListItemTitle>
+                    <a [routerLink]="['/authors', author.id]">
+                        {{author.fullName}}
+                    </a>
+                </div>
+                </mat-list-item>
+            </mat-list>
+
+        </div>
+    </mat-grid-tile>
+      
+    <mat-grid-tile rowspan="2">
+        <div>
+        <h2>Libro {{book.title}}</h2>
+        <p>Fecha Lanzamiento: {{book.release | date: "dd/MM/YYYY"}}</p>
+
+        <h3>Sinopsis</h3>
+        <p>{{book.sinopsis}}</p>
+        </div>
+    </mat-grid-tile>
+
+    <mat-grid-tile rowspan="2">
+        <div>
+            <h2>Precio: {{book.price}} €</h2>
+            <p>Envio gratuito</p>
+    
+
+            <button mat-fab extended color="primary">
+                <mat-icon>shopping_cart</mat-icon>
+                Comprar
+            </button>
+       </div>
+    </mat-grid-tile>
+    
+    <mat-grid-tile colspan="3" rowspan="1">
+        <div>
+        <h3>Todos los envíos gratuitos</h3>
+        <a routerLink="/">Enlace 1</a>
+        </div>
+    </mat-grid-tile>
+</mat-grid-list>
+    
