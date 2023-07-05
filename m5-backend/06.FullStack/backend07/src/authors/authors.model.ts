@@ -12,9 +12,14 @@ export class Author{
     @Column({length: 50})
     email: string;
 
-    
     @Column({type: 'text'})
     bio: string;
+
+    @Column()
+    birthday: Date;
+
+    @Column()
+    photo: string;
 
     @CreateDateColumn({name: 'created_date'})
     createDate: Date;
@@ -27,7 +32,7 @@ export class Author{
     //eager true carga de forma temprana la asociacion, 
     //implica que location se carga en las consultas select de author
     @OneToOne(() => Location, {cascade:true, eager: true})//cuidado con eager
-    @JoinColumn()//obligatorio
+    @JoinColumn({name:'id_location'})//obligatorio
     location: Location;
 }
 

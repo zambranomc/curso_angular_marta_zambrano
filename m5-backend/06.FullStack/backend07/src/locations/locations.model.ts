@@ -10,11 +10,10 @@ export class Location{
     @Column()
     street: string;
     
-
     @Column()
     city: string;
 
-    @Column()
+    @Column({name: 'postal_code'})
     postalCode: string;
 
     @Column()

@@ -7,11 +7,14 @@ export class Category{
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column({length:50})
+    @Column({unique:true, length:50})
     name: string;
 
     @Column({length:300})
     description: string;
+
+    @Column()
+    color: string;
 
     //Campo opcional nullable
     @Column({nullable: true})
@@ -19,5 +22,9 @@ export class Category{
 
     @Column({name: 'min_age'})
     minAge: number;
+
+    @CreateDateColumn({name: 'created_date'})
+    createdDate: Date;
+
 
 }

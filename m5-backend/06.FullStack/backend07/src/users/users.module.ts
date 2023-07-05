@@ -7,15 +7,9 @@ import { User } from './users.model';
 @Module({
   imports: [TypeOrmModule.forFeature([User])],
   controllers: [UsersController],
-  providers: [UsersService]
+  providers: [UsersService],
+  exports: [UsersService]
 })
-export class UsersModule {
+export class UsersModule {}
 
-
-
-
-}
-function TypeOrmModuleforFeature(arg0: (typeof User)[]) {
-  throw new Error('Function not implemented.');
-}
 

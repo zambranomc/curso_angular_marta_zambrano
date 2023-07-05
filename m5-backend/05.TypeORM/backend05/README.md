@@ -14,6 +14,6 @@ Pasos manuales:
 * Dentro de books.model.ts añadir las columnas necesarias con anotaciones/decoradores: @Entity, @Column
 
 * books.module.ts agregar:
-imports: [TypeOrmModule.forFeature([Book])],
+imports: [TypeOrmModule.forFeature([Book)],
 
 * books.service.ts

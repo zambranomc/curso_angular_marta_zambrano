@@ -27,16 +27,29 @@ export class Book{
     @Column({type: 'boolean', default: false})
     published: boolean;
 
+    @Column({type: 'text'})
+    sinopsis: string;
+
+    @Column()
+    release: Date;
+
+    @Column({name: 'num_pages'})
+    numPages: number;
+
+    @Column()
+    photo: string;
+
     //Asociación con author ManyToOne
 
     @ManyToOne(() => Author)
-    @JoinColumn({name: 'id-author'})
+    @JoinColumn({name: 'id_author'})
     author: Author;
+
 
     //Asociacion con editorial
 
     @ManyToOne(() => Editorial)
-    @JoinColumn({name: 'idEditorial'})
+    @JoinColumn({name: 'id_editorial'})
     editorial: Editorial;
 
     //Asociacion Manytomany book - category
