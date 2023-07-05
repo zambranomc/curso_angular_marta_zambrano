@@ -15,7 +15,8 @@ import{  MatToolbarModule } from '@angular/material/toolbar';
 import{  MatMenuModule } from '@angular/material/menu';
 import{  MatGridListModule } from '@angular/material/grid-list';
 import { AuthorsModule } from './authors/authors.module';
-
+import { CategoriesModule } from './categories/categories.module';
+import { AuthModule } from './auth/auth.module';
 
 
 
@@ -36,6 +37,8 @@ import { AuthorsModule } from './authors/authors.module';
     MatMenuModule,
     MatGridListModule,
     AuthorsModule,
+    AuthModule,
+    CategoriesModule
     
 
 

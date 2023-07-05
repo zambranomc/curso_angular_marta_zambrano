@@ -1,7 +1,11 @@
+import { ILocation } from "./location.model";
+
 export interface IAuthor {
     id:number;
-    fullName: string;
+    name: string;
+    email:string;
     bio: string;
-    city: string;
+    birthday: Date;
     photo: string;
+    location?: ILocation;
 }

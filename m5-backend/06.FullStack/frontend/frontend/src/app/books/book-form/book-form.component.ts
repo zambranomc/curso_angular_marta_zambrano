@@ -30,8 +30,8 @@ export class BookFormComponent implements OnInit {
     price: new FormControl<number>(0, [
       Validators.required, Validators.min(5), Validators.max(500), Validators.pattern("^[0-9]+([.,][0-9]{1,2})?$")]),
     release: new FormControl<Date>(new Date()),
-    authorId: new FormControl<number>(0, [Validators.required]),
-    categories: new FormControl<number[]>([])
+    author: new FormControl<any>(null, [Validators.required]),
+    categories: new FormControl<any[]>([])
     
   });
 
@@ -65,7 +65,7 @@ export class BookFormComponent implements OnInit {
       numPages: book.numPages,
       price: book.price,
       release: book.release,
-      authorId: book.authorId,
+      author: book.author,
       categories: book.categories
     });
   }
@@ -78,7 +78,7 @@ export class BookFormComponent implements OnInit {
     let price = this.bookForm.get('price')?.value ?? 5;
     let release = this.bookForm.get('release')?.value ?? new Date();
     let photo = "http://dummyimage.com/170x100.png/dddddd/000000";
-    let authorId = this.bookForm.get('author.id')?.value ?? 0;
+    let author = this.bookForm.get('author')?.value ?? undefined;
     let categories = this.bookForm.get('categories')?.value ?? [];
     
     //Crear objeto desde la interfaz
@@ -87,13 +87,16 @@ export class BookFormComponent implements OnInit {
     
     let book: IBook = {
       id: id,
+      isbn: '',
+      quantity:0,
+      published: true,
       title: title,
       sinopsis: sinopsis,
       release: release,
       numPages: numPages,
       photo: photo,
       price: price,
-      authorId: authorId,
+      author: author,
       categories: categories
     }
     if (id === 0)// crear libro

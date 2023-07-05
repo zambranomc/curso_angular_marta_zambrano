@@ -10,16 +10,16 @@
       
     <mat-grid-tile rowspan="2">
         <div>
-        <h2>Autor {{author.fullName}}</h2>
+        <h2>Autor {{author.name}}</h2>
         <p>Nacimiento: </p>
-        <p>Origen: {{author.city}}</p>
+        <p *ngIf="author.location">Origen: {{author.location.country}}</p>
         </div>
     </mat-grid-tile>
 
     <mat-grid-tile rowspan="2">
         <div>
             <h2>Biografía</h2>
-            <p>E{{author.bio}}</p>
+            <p>{{author.bio}}</p>
     
        </div>
     </mat-grid-tile>
@@ -36,7 +36,6 @@
             </mat-list-item>
         </mat-list>    
     </mat-grid-tile>
-        <h3>Todos los envíos gratuitos</h3>
-        <a routerLink="/">Enlace 1</a>
+        
         
 </mat-grid-list>

@@ -20,11 +20,16 @@ export class BookService {
     return this.httpClient.get<IBook[]>(this.url);
   }
 
+  //Metodo del controller
+  findAllWhithRelations(): Observable<IBook[]> {
+    return this.httpClient.get<IBook[]>(`${this.url}/load-relations`);
+  }
+
   //filtro por author busca en el array de libros
   // y devuelve los que correponden al Id del author escogido
 
   findAllByAuthorId(authorId: number):Observable<IBook[]> {
-    return this.httpClient.get<IBook[]>(`${this.url}?authorId=${authorId}`);
+    return this.httpClient.get<IBook[]>(`${this.url}/author/${authorId}`);
   }
 
   //Filtro  por categorias
@@ -34,22 +39,22 @@ export class BookService {
     return this.httpClient.get<IBook[]>(`${this.url}?categories_like=${categoryId}`);
   }
 
-//Crear un nuevo objeto todo Event en el servidor
-  create(event: IBook): Observable<IBook>{
-    return this.httpClient.post<IBook>(this.url, event);
-}
-
 
   //Filtrar por una url determinada
 
   findById(id: number): Observable<IBook>{
-    return this.httpClient.get<IBook>(`${this.url}/${id}`);
+    return this.httpClient.get<IBook>(`${this.url}/id/${id}`);
   }
+
+  //Crear un nuevo objeto todo Event en el servidor
+  create(book: IBook): Observable<IBook>{
+    return this.httpClient.post<IBook>(this.url, book);
+}
 
   
   //Update modificar algo que existe
-  update(event: IBook): Observable<IBook>{
-    return this.httpClient.put<IBook>(`${this.url}/${event.id}`,event);
+  update(book: IBook): Observable<IBook>{
+    return this.httpClient.put<IBook>(`${this.url}`, book);
   }
 
 

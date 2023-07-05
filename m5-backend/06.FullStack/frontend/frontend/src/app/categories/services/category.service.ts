@@ -8,7 +8,7 @@ import { ICategory } from '../models/category.model';
 })
 export class CategoryService {
   
-  url:string = "http://localhost:3000/books";
+  url:string = "http://localhost:3000/categories";
 
   
   constructor(private httpClient: HttpClient) { }

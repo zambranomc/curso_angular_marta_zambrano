@@ -6,8 +6,8 @@
 </button>
 
 <div *ngIf="author" class="list-header">
-    <img class="list-header-img"  [src]="author.photo"  [alt]="author.fullName">
-    <h2>Autor{{author.fullName}}</h2>
+    <img class="list-header-img"  [src]="author.photo"  [alt]="author.name">
+    <h2>Autor{{author.name}}</h2>
 </div>
 
 <div *ngIf="category" class="list-header">
@@ -20,13 +20,13 @@
   </div>
 
 <mat-accordion>
-    <mat-expansion-panel hideToggle>
+    <mat-expansion-panel>
       <mat-expansion-panel-header>
         <mat-panel-title>
          Filtar por categoría
         </mat-panel-title>
       </mat-expansion-panel-header>
-            <mat-chip-listbox aria-label="Dog selection">
+            <mat-chip-listbox>
                 <a  *ngFor="let category of categories " [routerLink]="['/books/category', category.id]">
                     <mat-chip-option >
                     <img matChipAvatar [src]="category.photo" [alt]="category.name"/>
@@ -42,11 +42,11 @@
           Filtrar por Autor
         </mat-panel-title>
       </mat-expansion-panel-header>
-      <mat-chip-listbox aria-label="Dog selection">
+      <mat-chip-listbox >
         <a  *ngFor="let author of authors " [routerLink]="['/books/author', author.id]">
              <mat-chip-option color="primary">
-             <img matChipAvatar [src]="author.photo" [alt]="author.fullName"/>
-            {{author.fullName}}
+             <img matChipAvatar [src]="author.photo" [alt]="author.name"/>
+            {{author.name}}
              </mat-chip-option>
          </a>
        </mat-chip-listbox>
@@ -55,14 +55,10 @@
   
 
 
-
-
-
-
 <table mat-table [dataSource]="books" class="mat-elevation-z8">
     <ng-container matColumnDef="title">
         <th mat-header-cell *matHeaderCellDef>Título</th>
-        <td mat-cell *matCellDef="let book">{{book.title | uppercase}}</td>
+        <td mat-cell *matCellDef="let book">{{book.title | lowercase}}</td>
     </ng-container>
 
     <ng-container matColumnDef="sinopsis">

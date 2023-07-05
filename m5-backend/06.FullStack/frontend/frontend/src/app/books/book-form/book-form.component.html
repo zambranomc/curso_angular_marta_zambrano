@@ -57,14 +57,14 @@
 
     <mat-form-field>
       <mat-label>Selecciona el autor del libro</mat-label>
-      <mat-select formControlName="authorId" name="authorId">
+      <mat-select formControlName="author" name="author">
         <mat-option>Ninguna</mat-option>
         <mat-option *ngFor="let author of authors" [value]="author.id">
-                  {{author.fullName}}
+                  {{author.name}}
         </mat-option>
       </mat-select>
-      <mat-error *ngIf="bookForm.get('authorId')?.invalid && 
-                        bookForm.get('authorId')?.touched">
+      <mat-error *ngIf="bookForm.get('author')?.invalid && 
+                        bookForm.get('author')?.touched">
                 Es obligatorio seleccionar un autor
       </mat-error>
   </mat-form-field>
@@ -79,11 +79,6 @@
   </mat-form-field>
 
 
-
-            
-  
-  
-          
     <button mat-fab extended type="submit" [disabled]="bookForm.invalid">
     <mat-icon>send</mat-icon>
               Enviar
