@@ -1,9 +1,11 @@
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Column, CreateDateColumn ,Entity, PrimaryGeneratedColumn } from "typeorm";
+import { UserRole } from "./user-role.enum";
 
-export enum UserRole{
-    USER = 'user',
-    ADMIN = 'admin'
-}
+
+//export enum UserRole{
+   // USER = 'user',
+   // ADMIN = 'admin'
+//}
 
 @Entity()
 export class User{
@@ -26,5 +28,8 @@ export class User{
         default: UserRole.USER
     })
     role: UserRole;
+
+    @Column({nullable: true})
+    avatarImage?: string;// nombre de la imagen en la carpeta uploads
 
 }

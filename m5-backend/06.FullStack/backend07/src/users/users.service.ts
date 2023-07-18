@@ -1,6 +1,6 @@
-import { ConflictException, Injectable } from '@nestjs/common';
+import { ConflictException, Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { User, UserRole } from './users.model';
+import { User } from './users.model';
 import { Repository } from 'typeorm';
 @Injectable()
 export class UsersService {
@@ -37,7 +37,45 @@ export class UsersService {
         }
     }
 
+    async update(user: User): Promise<User>{
+        let userFromDB = await this.userRepo.findOne({
+            where:{
+                id: user.id
+            }
+        });
 
+        if(!userFromDB) throw new NotFoundException('User no encontrado');
+        try{
+            console.log(user);
+            userFromDB.username = user.username;
+            userFromDB.email = user.email;
+            return await this.userRepo.save(userFromDB);
 
+        } catch (error){
+            console.log(error);
+            throw new ConflictException('Error actualizando user');
+        }
+    }
+
+    async updateAvatar(user: User): Promise<User>{
+        let userFromDB = await this.userRepo.findOne({
+            where:{
+                id: user.id
+            }
+        });
+
+        if(!userFromDB) throw new NotFoundException('User no encontrado');
+        try{
+            
+            //Colocar el avatar en backend
+            userFromDB.avatarImage = user.avatarImage;
+            return await this.userRepo.save(userFromDB);
+
+        } catch (error){
+            console.log(error);
+            throw new ConflictException('Error actualizando user');
+        }
+    
+    }
 
 }
