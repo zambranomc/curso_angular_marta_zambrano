@@ -10,7 +10,7 @@ export class JwtStrategy extends PassportStrategy(Strategy){
 
     constructor(private userService: UsersService){
 
-        console.log("Jwt strategy en acción!");
+       // console.log("Jwt strategy en acción!");
         super({
             //extrae el token del header Authorization y verifica si es correcto
             jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
