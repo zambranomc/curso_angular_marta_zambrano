@@ -21,14 +21,16 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatListModule } from '@angular/material/list';
 import {MatChipsModule} from '@angular/material/chips';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { MatExpansionModule} from '@angular/material/expansion'
+import { MatExpansionModule} from '@angular/material/expansion';
+import { BookFormImagesComponent } from './book-form-images/book-form-images.component'
 
 @NgModule({
     declarations: [
         BookListComponent,
         BookDetailComponent,
         BookFormComponent,
-        BookGalleryComponent
+        BookGalleryComponent,
+        BookFormImagesComponent
     ],
     imports: [
         CommonModule,
