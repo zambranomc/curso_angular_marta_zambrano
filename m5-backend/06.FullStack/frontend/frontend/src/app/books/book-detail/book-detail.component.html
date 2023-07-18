@@ -5,6 +5,13 @@
         <div>
             <h2>Portada</h2>
             <img src="{{book.photo}}" style="max-width: 150px;">
+
+            <button mat-raised-button color="primary"
+            style="width: 100%;" [routerLink]="['/books', book.id, 'images']">
+              <mat-icon>photo_library</mat-icon>
+         
+            Cambiar imágenes
+            </button>
             
             <mat-list *ngIf ="book.author">
                 <mat-list-item >
@@ -37,10 +44,20 @@
             <p>Envio gratuito</p>
     
 
-            <button mat-fab extended color="primary">
+            <!--button mat-fab extended color="primary">
                 <mat-icon>shopping_cart</mat-icon>
                 Comprar
-            </button>
+            </button-->
+
+             <!-- /bookings/1/new -->
+      <button mat-raised-button color="primary"
+      style="width: 100%;" [routerLink]="['/bookings', book.id, 'new']">
+        <mat-icon>shopping_cart</mat-icon>
+   
+      Reservar libro €
+      </button>
+
+         
        </div>
     </mat-grid-tile>
     
