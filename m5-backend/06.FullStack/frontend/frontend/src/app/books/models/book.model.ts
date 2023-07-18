@@ -15,4 +15,5 @@ export interface IBook {
     //Asociaciones: relaciones con otros modelos
     author: IAuthor;
     categories: ICategory[];
+    images?: string[];
 }
