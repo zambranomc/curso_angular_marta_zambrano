@@ -61,6 +61,11 @@ export class Book{
     })
     categories: Category[];
 
+    @Column("simple-array")
+    images: string[];
+
+
+
 }
 
 

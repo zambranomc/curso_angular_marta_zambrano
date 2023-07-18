@@ -1,6 +1,8 @@
-import { Body, Controller, Delete, Get, Param, ParseIntPipe, Post, Put } from '@nestjs/common';
+import { Body, Controller, Delete, Get, NotFoundException, Param, ParseIntPipe, Post, Put, Request, UploadedFiles, UseGuards, UseInterceptors } from '@nestjs/common';
 import { BooksService } from './books.service';
 import { Book } from './books.model';
+import { FilesInterceptor } from '@nestjs/platform-express';
+import { AuthGuard } from '@nestjs/passport';
 
 @Controller('books')
 export class BooksController {
@@ -147,6 +149,29 @@ export class BooksController {
         ): Promise<void>{
         return await this.bookService.deleteAllByAuthorId(authorId);
     }
+
+    @UseGuards(AuthGuard('jwt'))
+    @Post(':bookId/images')
+    @UseInterceptors(FilesInterceptor('file'))
+    async uploadBookImages(
+        @Request() request,
+        @Param('bookId', ParseIntPipe)bookId: number,
+        @UploadedFiles() files: Express.Multer.File[]
+        ){
+            console.log(files);
+            console.log(files.length);
+            //obtener el libro y si no existe lanzar una excepción
+            let book = await this.bookService.findById(bookId);
+            if(!book) throw new NotFoundException('Book not found');
+
+           //Asociar los nombre de los archivos en el atributo images del objeto book
+           book.images = [];
+           files.forEach(file => book.images.push(file.filename));
+
+           //Guardar el book en la base de datos
+
+           return await this.bookService.update(book);
+        }
 
 
 }

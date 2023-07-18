@@ -167,6 +167,7 @@ findAllByAuthorId(authorId:number): Promise<Book[]>{
             bookFromDB.title = book.title;
             bookFromDB.author = book.author;
             bookFromDB.editorial = book.editorial;
+            bookFromDB.images = book.images;
 
             //let categoryIds = book.categories.map(cat => cat.id);
             //let categories = await this.categoryService.findAllByIds(categoryIds);

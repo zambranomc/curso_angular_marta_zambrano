@@ -1,4 +1,4 @@
-import { ConflictException, Inject, Injectable } from '@nestjs/common';
+import { ConflictException, Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Booking } from './bookings.model';
 import { Repository} from 'typeorm';
@@ -20,6 +20,10 @@ export class BookingsService {
             console.log(error.message);
             throw new ConflictException('Cant save');
         }
+    }
+
+    findAll(): Promise<Booking[]>{
+        return this.bookingRepo.find();
     }
 
     findAllByUserId(userId: number): Promise<Booking[]>{
