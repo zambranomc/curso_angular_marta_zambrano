@@ -10,7 +10,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
-import { JwtInterceptor } from '@auth0/angular-jwt';
+import { JwtInterceptor } from './jwt.interceptor';
+import {MatCheckboxModule} from '@angular/material/checkbox'
 
 
 
@@ -26,7 +27,8 @@ import { JwtInterceptor } from '@auth0/angular-jwt';
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatCheckboxModule
     
   ],
   providers:[

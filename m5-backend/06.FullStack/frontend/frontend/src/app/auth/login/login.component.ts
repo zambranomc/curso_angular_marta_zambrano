@@ -27,7 +27,9 @@ export class LoginComponent {
     this.authService.login(login).subscribe(data => {
       console.log(data.token);
       //Guardar el token para utilizarlo en peticiones posteriores
-      localStorage.setItem('jwt_token', data.token);
+      //localStorage.setItem('jwt_token', data.token);
+      this.authService.handleLoginResponse(data.token);
+      
       this.router.navigate(['/books']);
     });
   }

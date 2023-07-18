@@ -8,11 +8,19 @@ const routes: Routes = [
   },
   {
     path: 'books',
-    loadChildren: () => import('./books/books.module').then(m => m.BooksModule)
+    loadChildren: () => import('./books/books.module').then(m => m.BooksModule)//Lazy loading
   },
   {
     path: 'auth',
     loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
+  },
+  {
+    path: 'bookings',
+    loadChildren: () => import('./bookings/bookings.module').then(m => m.BookingsModule)//lazy loading
+  },
+  {
+    path: 'users',
+    loadChildren: () => import('./users/users.module').then(m => m.UsersModule)//lazy loading
   },
   {
     path: '', redirectTo: 'books', pathMatch: 'full'

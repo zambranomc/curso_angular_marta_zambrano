@@ -17,6 +17,7 @@ import{  MatGridListModule } from '@angular/material/grid-list';
 import { AuthorsModule } from './authors/authors.module';
 import { CategoriesModule } from './categories/categories.module';
 import { AuthModule } from './auth/auth.module';
+import { BookingsModule } from './bookings/bookings.module';
 
 
 
@@ -38,7 +39,8 @@ import { AuthModule } from './auth/auth.module';
     MatGridListModule,
     AuthorsModule,
     AuthModule,
-    CategoriesModule
+    CategoriesModule,
+    BookingsModule
     
 
 
