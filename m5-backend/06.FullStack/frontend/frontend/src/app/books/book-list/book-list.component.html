@@ -1,6 +1,6 @@
 <h2>LISTADO DE LIBROS</h2>
 
-<button mat-raised-button color="primary" rowHeight="200px" routerLink="/books/new">
+<button mat-raised-button color="primary" routerLink="/books/new" *ngIf="isAdmin" >
     <mat-icon>add</mat-icon>
     Crear libro
 </button>
@@ -15,7 +15,7 @@
     <h2>Categoría{{category.name}}</h2>
 </div>
 
-<div class="table-count" *ngIf="books.length">
+<div class="table-count" *ngIf="books.length >0">
     Hay {{books.length}} libros en total
   </div>
 
@@ -25,7 +25,7 @@
         <mat-panel-title>
          Filtar por categoría
         </mat-panel-title>
-      </mat-expansion-panel-header>
+    </mat-expansion-panel-header>
             <mat-chip-listbox>
                 <a  *ngFor="let category of categories " [routerLink]="['/books/category', category.id]">
                     <mat-chip-option >
@@ -90,12 +90,12 @@
                 Ver
             </button>
             
-            <button mat-button color="primary" class="btn-primary" [routerLink]="['/books', book.id, 'edit']">
+            <button mat-button color="primary" class="btn-primary" [routerLink]="['/books', book.id, 'edit']" *ngIf="isAdmin">
                 <mat-icon>edit</mat-icon>
                 Editar
             </button>
 
-            <button mat-button color="primary" class="btn-primary" (click)="deleteBook(book)">
+            <button mat-button color="primary" class="btn-primary" (click)="deleteBook(book)" *ngIf="isAdmin">
                 <mat-icon>delete</mat-icon>
                 Borrar
             </button>
