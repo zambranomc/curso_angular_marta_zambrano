@@ -13,7 +13,17 @@ import { AuthModule } from './auth/auth.module';
 
 
 @Module({
-  imports: [DatabaseModule, BooksModule, AuthorsModule, EditorialsModule, LocationsModule, CategoriesModule, UsersModule, BookingsModule, AuthModule],
+  imports: [
+
+    DatabaseModule, 
+    BooksModule, 
+    AuthorsModule, 
+    EditorialsModule, 
+    LocationsModule, 
+    CategoriesModule, 
+    UsersModule, 
+    BookingsModule, 
+    AuthModule],
   controllers: [AppController],
   providers: [AppService],
 })

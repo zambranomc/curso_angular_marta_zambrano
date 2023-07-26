@@ -319,5 +319,81 @@ Añadir la clave como variable de entorno y utilizarla en el backend.
 
 process.env.NEST_JWT_SECRET
 
+## VARIABLE DE ENTORNO PARA CLAVE SECRETA
 Variable de entorno para la clave secreta
 Agregar la variable de entorno NEST_JWT_SECRET.
+
+
+## Subida de imagenes
+Frontend:
+ng generate component users/avatar
+
+avatar.component.ts:
+
+* onFileSelected()
+* save()
+*
+
+avatar.component.html
+* input type="file"
+* Botón guardar con método save()
+
+users routing module
+* agregar ruta path
+
+
+
+BACKEND:
+* npm install -D @types/multer
+
+* nest generate controller users/avatar
+avatar.controller.ts
+
+* otra opcion más facil es ponerlo en users.controller.ts
+colocar un @Post con useInterceptors
+
+* users.module.ts en el imports colocar
+@Module({
+  imports: [  
+    MulterModule.register({
+    storage: diskStorage({
+      //Carpeta destino donde se guardaran los archivos interceptados en los controladores
+      destination:'./uploads',
+      // Definir como se genera el nombre del archivo antes de guardarlo en la carpeta uploads
+      filename:(req,  file, callback)=>{
+        let fileName = uuidv4() + extname(file.originalname)
+        callback(null, fileName);
+      }
+    })
+  }),
+
+  * lleva el archivo a  carpeta uploads generando un nombre unico
+
+* user.model.ts añadir un campo avatarImage
+
+* En uploadAvatar() llamar a userService.updateAvatar() y guardar en el avatar en un atributo del usuario
+
+* main.ts y añadir una línea de codigo para que el backend pueda servir imagenes al frontend
+
+
+
+
+
+
+## OpenAPI
+
+npm install @nestjs/swagger
+
+En main.ts:
+
+  const config = new DocumentBuilder()
+    .setTitle('Cats example')
+    .setDescription('The cats API description')
+    .setVersion('1.0')
+    .addTag('cats')
+    .build();
+  const document = SwaggerModule.createDocument(app, config);
+  SwaggerModule.setup('api', app, document);
+
+
+  
